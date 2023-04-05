@@ -1,16 +1,22 @@
+import { BrowserRouter ,Route,Routes} from 'react-router-dom';
 import './App.css';
-import MainDash from './components/MainDash/MainDash';
-import Sidebar from './components/Sidebar/Sidebar';
+import Sidebar from './components/DashBoard/Sidebar/Sidebar';
+import MainDash from './components/DashBoard/MainDash/MainDash';
+import Students from './components/students/Students';
+
 
 function App() {
   return (
     <div className="App">
       <div className ="AppGlass">
         <Sidebar/>
-        <MainDash/>
-        <div>
-        </div>
-
+        <BrowserRouter>
+        <Routes>
+        <Route path='/dashboard' element={<MainDash/>}></Route>
+        <Route path='/' element={<Students/>}></Route>
+        <Route path='/Analytics' element={<div> </div>}></Route>
+    </Routes>
+        </BrowserRouter>
       </div>
     </div>
   );

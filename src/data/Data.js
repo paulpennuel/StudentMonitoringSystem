@@ -13,18 +13,22 @@ export const SidebarData = [
     {
         icon: UilEstate,
         heading: "Dashboard",
+        route: "/"
     },
     {
         icon: UilSearch,
         heading: "Search",
+        route: "/search"
     },
     {
         icon: UilUser,
         heading: "Students",
+        route: "/students"
     },
     {
         icon: UilChart,
         heading: "Analytics",
+        route: "/analytics"
     }
 ];
 
@@ -47,7 +51,9 @@ export const CardsData=[
             name: "Sales",
             data: [31, 40, 28, 51, 42, 109, 100],
           },
+        
         ],
+        
     }, {
         title: "Boys",
         color: {
@@ -65,6 +71,7 @@ export const CardsData=[
             data: [10, 100, 50, 70, 80, 30, 40],
           },
         ],
+        
       },
       {
         title: "Girls",

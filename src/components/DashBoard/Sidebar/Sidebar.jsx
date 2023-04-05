@@ -1,13 +1,14 @@
 import React from 'react'
-import Logo from "../../img/logo.png"
+import Logo from '../../img/logo.png'
 import './Sidebar.css'
-import { SidebarData } from '../../data/Data'
+import { SidebarData } from '../../../data/Data'
 import { useState } from 'react'
+import  {useNavigate} from "react-router-dom"
 
 const Sidebar = () => {
-
   const [selected, setSelected] = useState(0);
   return (
+    
     <div className='Sidebar'>
         {/* logo */}
         <div className='logo'>
@@ -21,22 +22,25 @@ const Sidebar = () => {
         <div className='menu'>
         {SidebarData.map((item, index) =>{
           return(
-            <div className={selected===index?'menuItem active':'menuItem'}
+            <menu className={selected===index?'menuItem active':'menuItem'}
               key={index}
-              onClick={()=>setSelected(index)}
-            >
+              onClick={(item)=>{setSelected(index)
+                
+              }}
+              
+            >     
                   <item.icon/>
                   <span>
                     {item.heading}
                   </span>
-            </div>
+            </menu>
           )
         })}
-
- 
         </div>
     </div>
   )
 }
+
+
 
 export default Sidebar
