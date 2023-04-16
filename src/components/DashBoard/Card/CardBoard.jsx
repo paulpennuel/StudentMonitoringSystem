@@ -7,7 +7,7 @@ import "./Card.css";
 import Chart from 'react-apexcharts'
 
 import { UilTimes } from "@iconscout/react-unicons";
-const Card = (props) => {
+const CardBoard = (props) => {
   const [expanded, setExpanded] = useState(false);
   return (
     <AnimateSharedLayout>
@@ -112,4 +112,4 @@ function ExpandedCard({ param, setExpanded }) {
   );
 }
 
-export default Card;
+export default CardBoard;

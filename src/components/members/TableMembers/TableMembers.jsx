@@ -1,5 +1,5 @@
 import * as React from "react";
-import { makeStyles, styled } from "@mui/material/styles";
+import {styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
@@ -7,7 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import "./TableStudent.css"
+import "./TableMember.css"
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -30,17 +30,17 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const makeStyle = (status) => {
-    if (status === 'Present'){
+    if (status === 'Sent!'){
         return {
             background: 'rgb(145 254 159 /47%)',
             color: 'green',
         }
-    }else if (status === 'Absent'){
+    }else if (status === 'Pending'){
         return {
             background: '#ffadad8f',
             color: 'red',
         }
-    }        
+    }     
 }
 
 function createData(name, gender,Age, className, Status) {
@@ -48,11 +48,11 @@ function createData(name, gender,Age, className, Status) {
 }
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, "Absent"),
-  createData("Ice cream sandwich", 237, 9.0, 37,"Present"),
-  createData("Eclair", 262, 16.0, 24,"Absent"),
-  createData("Cupcake", 305, 3.7, 67,"Present"),
-  createData("Gingerbread", 356, 16.0, 49,"Present"),
+  createData("Brenda Ananda", 159, 6.0, 24, "Pending"),
+  createData("Geofrey Ben", 237, 9.0, 37,"Sent!"),
+  createData("Eclair Jacobs", 262, 16.0, 24,"Pending"),
+  createData("Diana Khadija", 305, 3.7, 67,"Sent!"),
+  createData("Trevor Kimani", 356, 16.0, 49,"Sent!"),
 ];
 
 export default function CustomizedTables() {
@@ -68,10 +68,10 @@ export default function CustomizedTables() {
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Student</StyledTableCell>
-            <StyledTableCell align="left">Gender</StyledTableCell>
-            <StyledTableCell align="left">Age</StyledTableCell>
-            <StyledTableCell align="left">Class</StyledTableCell>
+            <StyledTableCell>Member</StyledTableCell>
+            <StyledTableCell align="left">Weight in kg</StyledTableCell>
+            <StyledTableCell align="left">Points</StyledTableCell>
+            <StyledTableCell align="left">Algorands</StyledTableCell>
             <StyledTableCell align="left">Status</StyledTableCell>
 
           </TableRow>

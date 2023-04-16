@@ -22,8 +22,8 @@ export const SidebarData = [
     },
     {
         icon: UilUser,
-        heading: "Students",
-        route: "/students"
+        heading: "Collection",
+        route: "/collection"
     },
     {
         icon: UilChart,

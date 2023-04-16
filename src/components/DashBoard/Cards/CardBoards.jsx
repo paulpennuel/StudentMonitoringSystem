@@ -1,14 +1,14 @@
 import React from 'react'
 import './Cards.css'
 import { CardsData } from '../../../data/Data'
-import Card  from '../Card/Card'
-const Cards = () => {
+import CardBoard  from '../Card/CardBoard'
+const Cardboards = () => {
   return (
     <div className='Cards'>
         {CardsData.map((card,id)=>{
             return (
                 <div className='parentContainer'>
-                    <Card
+                    <CardBoard
                     title = {card.title}
                     color = {card.color}
                     barValue = {card.barValue}
@@ -23,4 +23,4 @@ const Cards = () => {
 )
 }
 
-export default Cards
+export default Cardboards
